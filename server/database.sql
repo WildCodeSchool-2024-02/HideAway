@@ -30,10 +30,28 @@ CREATE DATABASE "hideaway";
 --
 -- Structure de la table `item`
 --
+CREATE TABLE `user` (
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `firstname` VARCHAR(50) NOT NULL,
+    `lastname` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `is_admin` BOOL NULL
+)
+
+INSERT INTO
+    `user` (
+        `firstname`,
+        `lastname`,
+        `password`,
+        `email`,
+        `is_admin`
+    )
+VALUES ()
 
 CREATE TABLE `item` (
-    `id` int(11) UNSIGNED NOT NULL,
-    `title` varchar(255) NOT NULL
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT `title` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 --
