@@ -3,9 +3,10 @@
 namespace App\Controller;
 
 use App\Model\UserManager;
-use App\Controller\AbstractController;
+use App\Controller\AbstractAPIController;
 
-class UserAPIController extends AbstractController
+
+class UserAPIController extends AbstractAPIController
 {
     public function register()
     {
@@ -31,6 +32,6 @@ class UserAPIController extends AbstractController
                 // return $this->login();
             }
         }
-        return json_encode($errors);
+        return json_encode(['errors' => $errors]);
     }
 }
