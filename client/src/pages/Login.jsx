@@ -1,16 +1,48 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./styles/login.css";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "/login",
+        {
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        console.info("Login successful:", response.data);
+      } else {
+        console.error("Login failed");
+      }
+    } catch (error) {
+      console.error("Login failed", error);
+    }
+  };
+
   return (
     <>
       <div>
         <div className="background">
           <Header />
-          <form method="post">
+          <form method="post" onSubmit={handleSubmit}>
             <section>
               <div className="cardcenter">
                 <img
@@ -30,7 +62,8 @@ export default function Login() {
                       type="email"
                       id="typeEmailX"
                       name="email"
-                      value=""
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email"
                       required
                     />
@@ -41,20 +74,21 @@ export default function Login() {
                       id="typePasswordX"
                       name="password"
                       placeholder="Mot de passe"
-                      value=""
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       required
                     />
                   </div>
-                  <Link to="/">
-                    <button
-                      data-mdb-button-init
-                      data-mdb-ripple-init
-                      type="submit"
-                      className="connexionbutton"
-                    >
-                      Connexion
-                    </button>
-                  </Link>
+                  {/* <Link to="/"> */}
+                  <button
+                    data-mdb-button-init
+                    data-mdb-ripple-init
+                    type="submit"
+                    className="connexionbutton"
+                  >
+                    Connexion
+                  </button>
+                  {/* </Link> */}
                   <hr />
 
                   <p className="logintext">

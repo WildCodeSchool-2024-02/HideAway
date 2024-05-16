@@ -1,16 +1,51 @@
-import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
 import "./styles/register.css";
 
 export default function Register() {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "/register",
+        {
+          firstname,
+          lastname,
+          email,
+          password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        console.info("Registration successful:", response.data);
+      } else {
+        console.error("Registration failed");
+      }
+    } catch (error) {
+      console.error("Registration failed", error);
+    }
+  };
+
   return (
     <div>
       <div>
         <div className="background">
           <Header />
-          <form method="post">
+          <form method="post" onSubmit={handleSubmit}>
             <section>
               <div>
                 <div className="cardcenter">
@@ -29,7 +64,10 @@ export default function Register() {
                         type="text"
                         id="firstname"
                         name="firstname"
+                        value={firstname}
+                        onChange={(e) => setFirstname(e.target.value)}
                         placeholder="Prénom"
+                        required
                       />
                     </div>
 
@@ -38,7 +76,10 @@ export default function Register() {
                         type="text"
                         id="lastname"
                         name="lastname"
+                        value={lastname}
+                        onChange={(e) => setLastname(e.target.value)}
                         placeholder="Nom"
+                        required
                       />
                     </div>
 
@@ -47,7 +88,10 @@ export default function Register() {
                         type="password"
                         id="typePasswordX"
                         name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         placeholder="Mot de passe"
+                        required
                       />
                     </div>
 
@@ -56,20 +100,21 @@ export default function Register() {
                         type="email"
                         id="typeEmailX"
                         name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email"
+                        required
                       />
                     </div>
 
-                    <Link to="/">
-                      <button
-                        data-mdb-button-init
-                        data-mdb-ripple-init
-                        type="submit"
-                        className="connexionbutton"
-                      >
-                        S'inscrire
-                      </button>
-                    </Link>
+                    <button
+                      data-mdb-button-init
+                      data-mdb-ripple-init
+                      type="submit"
+                      className="connexionbutton"
+                    >
+                      S'inscrire
+                    </button>
                   </div>
                 </div>
               </div>
