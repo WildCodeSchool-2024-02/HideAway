@@ -11,6 +11,6 @@ class RetraiteController extends AbstractAPIController
         $retraiteManager = new RetraiteManager();
         $retraites = $retraiteManager->selectAll();
 
-        return json_encode(['retraite' => $retraites]);
+        return json_encode($retraites);
     }
 }
