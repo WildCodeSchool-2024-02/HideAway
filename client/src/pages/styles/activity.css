@@ -1,0 +1,22 @@
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+.background {
+  background-image: url("../../../src/assets/images/fondlogin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+activity-container {
+  background-color: blue;
+}

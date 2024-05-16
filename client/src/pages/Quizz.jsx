@@ -10,13 +10,13 @@ export default function Quizz() {
       <div className="quizz-content">
         <h1 className="main-title">Quizz</h1>
         <p className="quizz-description">
-          Vous allez effectuer un test qui va déterminer quelle serais votre
-          activité idéal en fonction de vos réponses{" "}
+          Vous allez effectuer un test qui va déterminer quelle serait votre
+          activité idéale en fonction de vos réponses.{" "}
         </p>
         <form>
           <section className="quizz-question-response">
             <h2 className="quizz-question">
-              A qui cette expérience est destinée?
+              A qui cette expérience est-elle destinée?
             </h2>
             <label htmlFor="firstquestion">
               Pour offrir, eh oui je suis généreux !
@@ -68,7 +68,7 @@ export default function Quizz() {
             <label htmlFor="firstname">La montagne</label>
             <input type="checkbox" className="case" />
             <br />
-            <label htmlFor="firstname">La prairie</label>
+            <label htmlFor="firstname">La campagne</label>
             <input type="checkbox" className="case" />
             <br />
             <label htmlFor="firstname">La ville</label>
@@ -93,7 +93,7 @@ export default function Quizz() {
             <input type="checkbox" className="case" />
             <br />
             <label htmlFor="firstname">
-              Évasion, je veut partir dans un endroit insolite
+              Évasion, je veux partir dans un endroit insolite
             </label>
             <input type="checkbox" className="case" />
             <br />

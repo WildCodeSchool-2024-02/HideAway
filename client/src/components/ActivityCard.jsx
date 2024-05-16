@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import "./styles/activitycard.css";
 
@@ -7,15 +8,15 @@ function ActivityCard({ activity }) {
     <div className="card">
       <div className="card__header">
         <img
-          src={activity.image}
+          src={activity.first_url}
           alt={activity.title}
           className="card__image"
         />
       </div>
       <div className="card__body">
         <span className="tag">{activity.label}</span>
-        <h4> {activity.title} !</h4>
-        <p className="text">{activity.subtitle}</p>
+        <h4> {activity.titre} !</h4>
+        <p className="text">{activity.sous_titre}</p>
         <div>
           <h5> Exemples d'activités</h5>
           <div className="card__flex__activity">
@@ -46,9 +47,11 @@ function ActivityCard({ activity }) {
           </div>
         </div>
         <div className="button__section">
-          <button className="button__showmore" type="button">
-            Je veux en savoir plus
-          </button>
+          <Link to={`/activity/${activity.id}`}>
+            <button className="button__showmore" type="button">
+              Je veux en savoir plus
+            </button>
+          </Link>
         </div>
       </div>
     </div>
