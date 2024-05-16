@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+.background {
+  background-image: url("../../../src/assets/images/fondlogin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.page-title {
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  color: rgb(248, 248, 248);
+  font-weight: bold;
+  font-size: 5rem;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-6);
+}
+
+.button-quizz {
+  background-color: var(--color-5);
+  font-size: 7rem;
+}
+
+.button-all {
+  background-color: var(--color-5);
+  font-size: 5rem;
+}
+
+.buttons-quizz-all {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: rem;
+}
+
+.imgparachute {
+  width: 50rem;
+  height: 50rem;
+}
+
+.homecontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding-top: 10rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.all-buttons {
+  background-color: white;
+  width: 20rem;
+  height: 50rem;
+}
+
+.text-quizz {
+  font-size: 4rem;
+  font-family: var(--primary-font);
+}
+.accueiltitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

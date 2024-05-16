@@ -6,10 +6,16 @@ function Header() {
   return (
     <div className="header">
       <nav className="nav-bar">
-        <img src="" alt="logo" />
+        <Link to="/">
+          <img
+            src="../../src/assets/images/logo.png"
+            alt="logo"
+            className="logo"
+          />
+        </Link>
         <ul className="nav-ul">
           <li className="nav-point">
-            <Link to="/"> Home </Link>
+            <Link to="/"> Accueil </Link>
           </li>
 
           <li className="nav-li">

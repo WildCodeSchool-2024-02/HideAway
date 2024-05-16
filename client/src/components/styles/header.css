@@ -19,18 +19,26 @@ body {
   box-sizing: border-box;
 }
 
+.header {
+  padding-top: 1rem;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
-  width: 700px;
+  width: 50rem;
   height: 80px;
   color: white;
   margin: 0 auto 0;
   border-radius: 10px;
   background-color: var(--color-6);
   font-size: var(--secondary-font);
+}
+
+li a:hover {
+  color: rgb(77, 77, 77);
 }
 
 .nav-ul {
@@ -54,4 +62,9 @@ a {
   font-family: var(--secondary-font);
   font-size: large;
   color: white;
+}
+
+.logo {
+  display: flex;
+  width: 130px;
 }

@@ -31,6 +31,14 @@ h1 {
 }
 
 @media screen and (min-width: 762px) {
+  .activitylist-section {
+    width: 100vw;
+    height: 92vh;
+    background-color: var(--color-2);
+    box-sizing: border-box;
+    padding: 2rem 10rem;
+  }
+
   .activitylist-container {
     display: flex;
     flex-direction: row;

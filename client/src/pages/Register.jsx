@@ -13,55 +13,64 @@ export default function Register() {
           <form method="post">
             <section>
               <div>
-                <div className="cardlogin">
-                  <h2>Inscription</h2>
+                <div className="cardcenter">
+                  <img
+                    src="../../../src/assets/images/welcome.jpeg"
+                    className="imgwelcome"
+                    alt="welcome"
+                  />
+                  <div className="cardlogin">
+                    <p className="bienvenuetexte">Bienvenue !</p>
+                    <hr />
+                    <h2>Inscription</h2>
 
-                  <div data-mdb-input-init className="form-group">
-                    <input
-                      type="text"
-                      id="firstname"
-                      name="firstname"
-                      placeholder="Prénom"
-                    />
+                    <div data-mdb-input-init className="form-group">
+                      <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        placeholder="Prénom"
+                      />
+                    </div>
+
+                    <div data-mdb-input-init className="form-group">
+                      <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        placeholder="Nom"
+                      />
+                    </div>
+
+                    <div data-mdb-input-init className="form-group">
+                      <input
+                        type="password"
+                        id="typePasswordX"
+                        name="password"
+                        placeholder="Mot de passe"
+                      />
+                    </div>
+
+                    <div data-mdb-input-init className="form-group">
+                      <input
+                        type="email"
+                        id="typeEmailX"
+                        name="email"
+                        placeholder="Email"
+                      />
+                    </div>
+
+                    <Link to="/">
+                      <button
+                        data-mdb-button-init
+                        data-mdb-ripple-init
+                        type="submit"
+                        className="connexionbutton"
+                      >
+                        S'inscrire
+                      </button>
+                    </Link>
                   </div>
-
-                  <div data-mdb-input-init className="form-group">
-                    <input
-                      type="text"
-                      id="lastname"
-                      name="lastname"
-                      placeholder="Nom"
-                    />
-                  </div>
-
-                  <div data-mdb-input-init className="form-group">
-                    <input
-                      type="password"
-                      id="typePasswordX"
-                      name="password"
-                      placeholder="Password"
-                    />
-                  </div>
-
-                  <div data-mdb-input-init className="form-group">
-                    <input
-                      type="email"
-                      id="typeEmailX"
-                      name="email"
-                      placeholder="Email"
-                    />
-                  </div>
-
-                  <Link to="/">
-                    <button
-                      data-mdb-button-init
-                      data-mdb-ripple-init
-                      type="submit"
-                      className="connexionbutton"
-                    >
-                      S'inscrire
-                    </button>
-                  </Link>
                 </div>
               </div>
             </section>

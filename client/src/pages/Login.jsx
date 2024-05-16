@@ -40,7 +40,7 @@ export default function Login() {
                       type="password"
                       id="typePasswordX"
                       name="password"
-                      placeholder="Password"
+                      placeholder="Mot de passe"
                       value=""
                       required
                     />
