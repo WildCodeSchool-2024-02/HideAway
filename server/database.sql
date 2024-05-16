@@ -142,7 +142,7 @@ VALUES (
     )
     VALUES (
         'LA RETRAITE DES GOAT',
-        '/server/public/assets/images/yoga-chevre.jpg',
+        'https://visa-forme.fr/wp-content/uploads/2023/02/yoga-chevre.jpg',
         'Vous ne rêvez pas. Elle porte un legging',
         'Venez découvrir notre retraite dans le Larzac entourée de nos amies les chèvres. Une semaine de déconnexion à la réalité et de reconnexion  à la nature. De nombreuses activités sont à découvrir et nous vous accompagnons dans cette expérience inédite !',
         'Yoga avec les chèvres',
@@ -158,7 +158,7 @@ VALUES (
     ),
     (
         'La retraite des retraités',
-        '/server/public/assets/images/37477412-ai-genere-un-vieux-homme-prise-une-selfie-tandis-que-parachutisme-avec-genere-ai-photo.jpeg',
+        'https://france3-regions.francetvinfo.fr/image/ATk4a49x1bk7xzKhbvFN5STVOvg/600x400/regions/2021/06/29/60db216f5746e_gh018134-00-01-05-04-5378140.jpg',
         'On préfère notre grand-parents branchés plutôt que débranché.',
         'Envie d’une semaine de sport intense ? Venez profitez de votre retraite dans notre retraite dans un contexte hors du commun. Eloigné de toute technologie, venez découvrir les sports extrême entre senior !',
         'Saut en parachute',
@@ -174,7 +174,7 @@ VALUES (
     ),
     (
         'Dans son plus simple appareil',
-        '/server/public/assets/images/liste-plages-naturistes-nudiste-region-france.jpg',
+        'https://resize.prod.femina.ladmedia.fr/rblr/652,438/img/var/2023-07/liste-plages-naturistes-nudiste-region-france.jpg',
         'Vous ne rêvez pas. Elle ne porte rien',
         'Pour les plus courageux, nous proposons une retraite insolite à l’abris des regards. Ne vous embêtez pas avec les dimensions de votre valise pour l’avion, venez comme vous êtes.',
         'Randonnue',
