@@ -24,34 +24,15 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `simple-mvc`
 --
-CREATE DATABASE "hideaway";
 
 -- --------------------------------------------------------
 --
 -- Structure de la table `item`
 --
-CREATE TABLE `user` (
-    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `firstname` VARCHAR(50) NOT NULL,
-    `lastname` VARCHAR(50) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
-    `email` VARCHAR(100) NOT NULL,
-    `is_admin` BOOL NULL
-)
-
-INSERT INTO
-    `user` (
-        `firstname`,
-        `lastname`,
-        `password`,
-        `email`,
-        `is_admin`
-    )
-VALUES ()
 
 CREATE TABLE `item` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT `title` varchar(255) NOT NULL
+    `title` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 --
@@ -64,30 +45,32 @@ VALUES (1, 'Stuff'),
     (2, 'Doodads');
 
 --
+CREATE TABLE `user` (
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `firstname` VARCHAR(50) NOT NULL,
+    `lastname` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `is_admin` BOOLEAN NULL
+);
+
+INSERT INTO
+    `user` (
+        `firstname`,
+        `lastname`,
+        `password`,
+        `email`,
+        `is_admin`
+    )
+VALUES (
+        'test',
+        'test',
+        'test',
+        'test@test.com',
+        '0'
+    );
 -- Index pour les tables exportées
 --
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item` ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-AUTO_INCREMENT = 3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-;
 
 CREATE TABLE `retraite` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -107,13 +90,105 @@ CREATE TABLE `retraite` (
     `acti5_url` VARCHAR(250) NULL
 );
 
-INSERT INTO 
-`retraite` (`titre`, `first_url`, `sous-titre`, `description`, `activity1`, `acti1_url`, `activity2`, `acti2_url`, `activity3`, `acti3_url`, `activity4`, `acti4_url`, `activity5`, `acti5_url`)
-VALUES ("Titre 1", "url1", "Sous-titre1", "Description1", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
-("Titre 2", "url2", "Sous-titre2", "Description2", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
-("Titre 3", "url3", "Sous-titre3", "Description3", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
-("Titre 4", "url4", "Sous-titre4", "Description4", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
-("Titre 5", "url5", "Sous-titre5", "Description5", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5");
+INSERT INTO
+    `retraite` (
+        `titre`,
+        `first_url`,
+        `sous-titre`,
+        `description`,
+        `activity1`,
+        `acti1_url`,
+        `activity2`,
+        `acti2_url`,
+        `activity3`,
+        `acti3_url`,
+        `activity4`,
+        `acti4_url`,
+        `activity5`,
+        `acti5_url`
+    )
+VALUES (
+        'toto',
+        'https://www.assuropoil.fr/wp-content/uploads/2023/07/avoir-un-chat-sante.jpg',
+        'ceci est un sous titre',
+        'Mon cul sur la commode',
+        'la première activité',
+        'https://lemagduchat.ouest-france.fr/images/dossiers/2019-02/mini/chat-jouer-131405-650-400.jpg' '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+    );
+    INSERT INTO
+    `retraite` (
+        `titre`,
+        `first_url`,
+        `sous-titre`,
+        `description`,
+        `activity1`,
+        `acti1_url`,
+        `activity2`,
+        `acti2_url`,
+        `activity3`,
+        `acti3_url`,
+        `activity4`,
+        `acti4_url`,
+        `activity5`,
+        `acti5_url`
+    )
+    VALUES (
+        'LA RETRAITE DES GOAT',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\yoga-chevre.jpg',
+        'Vous ne rêvez pas. Elle porte un legging',
+        'Venez découvrir notre retraite dans le Larzac entourée de nos amies les chèvres. Une semaine de déconnexion à la réalité et de reconnexion  à la nature. De nombreuses activités sont à découvrir et nous vous accompagnons dans cette expérience inédite !',
+        'Yoga avec les chèvres',
+        '',
+        'Activité fromage de chèvre',
+        '',
+        'ShowCase de la chèvre de Mr Seguin',
+        '',
+        'Barbecue de chèvre',
+        '',
+        'Taxidermie de chèvre',
+        ''
+    ),
+    (
+        'La retraite des retraités',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\37477412-ai-genere-un-vieux-homme-prise-une-selfie-tandis-que-parachutisme-avec-genere-ai-photo.jpeg',
+        'On préfère notre grand-parents branchés plutôt que débranché.',
+        'Envie d’une semaine de sport intense ? Venez profitez de votre retraite dans notre retraite dans un contexte hors du commun. Eloigné de toute technologie, venez découvrir les sports extrême entre senior !',
+        'Saut en parachute',
+        '',
+        'Surf',
+        '',
+        'Baptème de voltige',
+        '',
+        'Escalade sur glace',
+        '',
+        'Jet Pack',
+        ''
+    ),
+    (
+        'Dans son plus simple appareil',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\liste-plages-naturistes-nudiste-region-france.jpg',
+        'Vous ne rêvez pas. Elle ne porte rien',
+        'Pour les plus courageux, nous proposons une retraite insolite à l’abris des regards. Ne vous embêtez pas avec les dimensions de votre valise pour l’avion, venez comme vous êtes.',
+        'Randonnue',
+        '',
+        'Olympoils',
+        '',
+        'Lutte',
+        '',
+        'Barbecul',
+        '',
+        'VolleyBall',
+        ''
+    );
+
 
 CREATE TABLE `quizz` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -122,7 +197,7 @@ CREATE TABLE `quizz` (
     `age` VARCHAR(3),
     `have_child` BOOLEAN,
     `nb_child` INT NOT NULL,
-    `u_are` VARCHAR,
-    `u_like` VARCHAR,
-    FOREIGN KEY (id_user) REFERENCES `user` (id)
+    `u_are` VARCHAR(250),
+    `u_like` VARCHAR(250),
+    `user_id` INT NOT NULL REFERENCES `user_id` (id)
 )
