@@ -98,14 +98,22 @@ CREATE TABLE `retraite` (
     `activity1` VARCHAR(250) NULL,
     `acti1_url` VARCHAR(250) NULL,
     `activity2` VARCHAR(250) NULL,
-    `acti1_ur2` VARCHAR(250) NULL,
+    `acti2_url` VARCHAR(250) NULL,
     `activity3` VARCHAR(250) NULL,
-    `acti1_ur3` VARCHAR(250) NULL,
+    `acti3_url` VARCHAR(250) NULL,
     `activity4` VARCHAR(250) NULL,
-    `acti1_ur4` VARCHAR(250) NULL,
+    `acti4_url` VARCHAR(250) NULL,
     `activity5` VARCHAR(250) NULL,
-    `acti1_ur5` VARCHAR(250) NULL
+    `acti5_url` VARCHAR(250) NULL
 );
+
+INSERT INTO 
+`retraite` (`titre`, `first_url`, `sous-titre`, `description`, `activity1`, `acti1_url`, `activity2`, `acti2_url`, `activity3`, `acti3_url`, `activity4`, `acti4_url`, `activity5`, `acti5_url`)
+VALUES ("Titre 1", "url1", "Sous-titre1", "Description1", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
+("Titre 2", "url2", "Sous-titre2", "Description2", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
+("Titre 3", "url3", "Sous-titre3", "Description3", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
+("Titre 4", "url4", "Sous-titre4", "Description4", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5"),
+("Titre 5", "url5", "Sous-titre5", "Description5", "Activite1", "acti_url1", "Activite2", "acti_url2", "Activite3", "acti_url3","Activite4", "acti_url4", "Activite5", "acti_url5");
 
 CREATE TABLE `quizz` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
