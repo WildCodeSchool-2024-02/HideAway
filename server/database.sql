@@ -24,7 +24,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `simple-mvc`
 --
-CREATE DATABASE "hideaway";
 
 -- --------------------------------------------------------
 --
