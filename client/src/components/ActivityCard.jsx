@@ -8,40 +8,40 @@ function ActivityCard({ activity }) {
     <div className="card">
       <div className="card__header">
         <img
-          src={activity.image}
-          alt={activity.title}
+          src={activity.first_url}
+          alt={activity.titre}
           className="card__image"
         />
       </div>
       <div className="card__body">
-        <h4>{activity.title} !</h4>
-        <p className="text">{activity.subtitle}</p>
+        <h4> {activity.titre} !</h4>
+        <p className="text">{activity.sous_titre}</p>
         <div>
-          <h5>Exemples d'activités</h5>
+          <h5> Exemples d'activités</h5>
           <div className="card__flex__activity">
             <div className="card__carroussel__activity">
               <img
-                src={activity.activity1image}
-                alt={activity.title}
+                src={activity.acti1_url}
+                alt={activity.titre}
                 className="card__image__activity"
               />
-              <p>{activity.activity1}</p>
+              <p> {activity.activity1} </p>
             </div>
             <div className="card__carroussel__activity">
               <img
-                src={activity.activity2image}
-                alt={activity.title}
+                src={activity.acti2_url}
+                alt={activity.titre}
                 className="card__image__activity"
               />
-              <p>{activity.activity2}</p>
+              <p> {activity.activity2} </p>
             </div>
             <div className="card__carroussel__activity">
               <img
-                src={activity.activity3image}
-                alt={activity.title}
+                src={activity.acti3_url}
+                alt={activity.titre}
                 className="card__image__activity"
               />
-              <p>{activity.activity3}</p>
+              <p> {activity.activity3} </p>
             </div>
           </div>
         </div>
@@ -56,20 +56,19 @@ function ActivityCard({ activity }) {
     </div>
   );
 }
-
 ActivityCard.propTypes = {
   activity: PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    first_url: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired,
+    sous_titre: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    activity1image: PropTypes.string.isRequired,
+    acti1_url: PropTypes.string.isRequired,
     activity1: PropTypes.string.isRequired,
-    activity2image: PropTypes.string.isRequired,
+    acti2_url: PropTypes.string.isRequired,
     activity2: PropTypes.string.isRequired,
-    activity3image: PropTypes.string.isRequired,
+    acti3_url: PropTypes.string.isRequired,
     activity3: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
