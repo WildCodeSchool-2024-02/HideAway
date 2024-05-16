@@ -13,5 +13,6 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'home/register' => ['UserAPIController', 'register']
+    'home/register' => ['UserAPIController', 'register'],
+    'retraite' => ['retraite', 'list']
 ];
