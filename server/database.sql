@@ -105,7 +105,7 @@ CREATE TABLE `retraite` (
     `acti1_ur4` VARCHAR(250) NULL,
     `activity5` VARCHAR(250) NULL,
     `acti1_ur5` VARCHAR(250) NULL
-)
+);
 
 CREATE TABLE `quizz` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -116,5 +116,5 @@ CREATE TABLE `quizz` (
     `nb_child` INT NOT NULL,
     `u_are` VARCHAR,
     `u_like` VARCHAR,
-    FOREIGN KEY (id_user) REFERENCES 
+    FOREIGN KEY (id_user) REFERENCES `user` (id)
 )
