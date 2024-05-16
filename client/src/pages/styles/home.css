@@ -45,18 +45,19 @@
 .button-quizz {
   background-color: var(--color-5);
   font-size: 7rem;
+  border-radius: 5%;
 }
 
 .button-all {
   background-color: var(--color-5);
   font-size: 5rem;
+  border-radius: 5%;
 }
 
 .buttons-quizz-all {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: rem;
 }
 
 .imgparachute {
@@ -100,7 +101,6 @@
   bottom: 10px;
   left: 40%;
   transform: translateX(-50%);
-  display: flex;
 }
 
 .dot {

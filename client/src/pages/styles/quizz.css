@@ -68,9 +68,13 @@
 .submit-quizz {
   display: flex;
   justify-content: center;
+  text-align: center;
   background-color: var(--color-5);
   text-decoration: none;
   color: var(--primary-color);
   width: 20rem;
   font-size: 5rem;
+  margin-bottom: 10rem;
+  height: 10rem;
+  padding-top: 1.5rem;
 }

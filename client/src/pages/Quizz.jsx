@@ -62,16 +62,16 @@ export default function Quizz() {
 
           <section className="quizz-question-response">
             <h2 className="quizz-question">Vous préferez:</h2>
-            <label htmlFor="firstname">Plage</label>
+            <label htmlFor="firstname">La plage</label>
             <input type="checkbox" className="case" />
             <br />
-            <label htmlFor="firstname">Montagne</label>
+            <label htmlFor="firstname">La montagne</label>
             <input type="checkbox" className="case" />
             <br />
-            <label htmlFor="firstname">Prairie</label>
+            <label htmlFor="firstname">La prairie</label>
             <input type="checkbox" className="case" />
             <br />
-            <label htmlFor="firstname">Ville</label>
+            <label htmlFor="firstname">La ville</label>
             <input type="checkbox" className="case" />
             <br />
           </section>
@@ -99,7 +99,11 @@ export default function Quizz() {
             <br />
           </section>
         </form>
-        <Link to="*" className="submit-quizz" activeClassName="active">
+        <Link
+          to="/activity/:id"
+          className="submit-quizz"
+          activeClassName="active"
+        >
           Finir le Quizz
         </Link>
       </div>
