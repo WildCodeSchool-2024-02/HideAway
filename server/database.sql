@@ -81,14 +81,48 @@ CREATE TABLE `retraite` (
     `activity1` VARCHAR(250) NULL,
     `acti1_url` VARCHAR(250) NULL,
     `activity2` VARCHAR(250) NULL,
-    `acti1_ur2` VARCHAR(250) NULL,
+    `acti2_url` VARCHAR(250) NULL,
     `activity3` VARCHAR(250) NULL,
-    `acti1_ur3` VARCHAR(250) NULL,
+    `acti3_url` VARCHAR(250) NULL,
     `activity4` VARCHAR(250) NULL,
-    `acti1_ur4` VARCHAR(250) NULL,
+    `acti4_url` VARCHAR(250) NULL,
     `activity5` VARCHAR(250) NULL,
-    `acti1_ur5` VARCHAR(250) NULL
+    `acti5_url` VARCHAR(250) NULL
 );
+
+INSERT INTO
+    `retraite` (
+        `titre`,
+        `first_url`,
+        `sous-titre`,
+        `description`,
+        `activity1`,
+        `acti1_url`,
+        `activity2`,
+        `acti2_url`,
+        `activity3`,
+        `acti3_url`,
+        `activity4`,
+        `acti4_url`,
+        `activity5`,
+        `acti5_url`
+    )
+VALUES (
+        'toto',
+        'https://www.assuropoil.fr/wp-content/uploads/2023/07/avoir-un-chat-sante.jpg',
+        'ceci est un sous titre',
+        'Mon cul sur la commode',
+        'la première activité',
+        'https://lemagduchat.ouest-france.fr/images/dossiers/2019-02/mini/chat-jouer-131405-650-400.jpg' '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+    );
 
 CREATE TABLE `quizz` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,

@@ -14,5 +14,5 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'home/register' => ['UserAPIController', 'register'],
-    'retraite' => ['retraite', 'list']
+    'retraite' => ['RetraiteController', 'list']
 ];
