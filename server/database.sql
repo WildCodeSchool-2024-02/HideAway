@@ -46,7 +46,13 @@ INSERT INTO
         `email`,
         `is_admin`
     )
-VALUES ()
+VALUES (
+        'test',
+        'test',
+        'test',
+        'test@test.com',
+        '0'
+    );
 
 CREATE TABLE `item` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
