@@ -1,4 +1,4 @@
--- Active: 1713452145964@@127.0.0.1@3306@hideaway
+-- Active: 1711385285915@@127.0.0.1@3306@hideaway
 -- phpMyAdmin SQL Dump
 -- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
@@ -24,7 +24,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `simple-mvc`
 --
-CREATE DATABASE "hideaway";
 
 -- --------------------------------------------------------
 --
@@ -114,7 +113,7 @@ CREATE TABLE `quizz` (
     `age` VARCHAR(3),
     `have_child` BOOLEAN,
     `nb_child` INT NOT NULL,
-    `u_are` VARCHAR,
-    `u_like` VARCHAR,
-    FOREIGN KEY (id_user) REFERENCES `user` (id)
+    `u_are` VARCHAR(250),
+    `u_like` VARCHAR(250),
+    `user_id` INT NOT NULL REFERENCES `user_id` (id)
 )
