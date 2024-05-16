@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: var(--color-4);
+}
+
+.activitylist-section {
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+}
+
+.activitylist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 762px) {
+  .activitylist-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    box-sizing: border-box;
+  }
+}

@@ -5,6 +5,8 @@ import Activities from "./pages/Activities";
 import Home from "./pages/Home";
 import Quizz from "./pages/Quizz";
 import Activity from "./pages/Activity";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 import App from "./App";
 
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: "/quizz",
         element: <Quizz />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/activity/:id",

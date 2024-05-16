@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+.main-title {
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+  font-size: 15rem;
+  font-family: var(--primary-font);
+}
+
+.quizz-description {
+  display: flex;
+  justify-content: center;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-bottom: 8rem;
+}
+
+.quizz-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  font-family: var(--primary-font);
+}
+
+.quizz-question {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--terciary-color);
+  margin-bottom: 4rem;
+}
+
+.quizz-question-response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 5rem;
+  background-color: var(--color-6);
+}
+
+/** Les cases **/
+.case {
+  height: 70px;
+  width: 80px;
+  border: 15rem solid var(--primary-color);
+  size: 25px;
+}
+
+.case-number {
+  height: 70px;
+  width: 80px;
+  size: 5rem;
+}
+
+.submit-quizz {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-5);
+  text-decoration: none;
+  color: var(--primary-color);
+  width: 20rem;
+  font-size: 5rem;
+}

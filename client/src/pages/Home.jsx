@@ -9,6 +9,18 @@ export default function Home() {
         <h1> PAGE D'ACCUEIL </h1>
         <ul>
           <li>
+            <Link to="/register" activeClassName="active">
+              {" "}
+              S'enregistrer
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" activeClassName="active">
+              {" "}
+              Se connecter
+            </Link>
+          </li>
+          <li>
             <Link to="/quizz" activeClassName="active">
               {" "}
               Faire le quizz
