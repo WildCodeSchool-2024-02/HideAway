@@ -1,4 +1,4 @@
--- Active: 1711385285915@@127.0.0.1@3306@hideaway
+-- Active: 1713452145964@@127.0.0.1@3306@hideaway
 -- phpMyAdmin SQL Dump
 -- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
@@ -123,6 +123,72 @@ VALUES (
         '',
         ''
     );
+    INSERT INTO
+    `retraite` (
+        `titre`,
+        `first_url`,
+        `sous-titre`,
+        `description`,
+        `activity1`,
+        `acti1_url`,
+        `activity2`,
+        `acti2_url`,
+        `activity3`,
+        `acti3_url`,
+        `activity4`,
+        `acti4_url`,
+        `activity5`,
+        `acti5_url`
+    )
+    VALUES (
+        'LA RETRAITE DES GOAT',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\yoga-chevre.jpg',
+        'Vous ne rêvez pas. Elle porte un legging',
+        'Venez découvrir notre retraite dans le Larzac entourée de nos amies les chèvres. Une semaine de déconnexion à la réalité et de reconnexion  à la nature. De nombreuses activités sont à découvrir et nous vous accompagnons dans cette expérience inédite !',
+        'Yoga avec les chèvres',
+        '',
+        'Activité fromage de chèvre',
+        '',
+        'ShowCase de la chèvre de Mr Seguin',
+        '',
+        'Barbecue de chèvre',
+        '',
+        'Taxidermie de chèvre',
+        ''
+    ),
+    (
+        'La retraite des retraités',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\37477412-ai-genere-un-vieux-homme-prise-une-selfie-tandis-que-parachutisme-avec-genere-ai-photo.jpeg',
+        'On préfère notre grand-parents branchés plutôt que débranché.',
+        'Envie d’une semaine de sport intense ? Venez profitez de votre retraite dans notre retraite dans un contexte hors du commun. Eloigné de toute technologie, venez découvrir les sports extrême entre senior !',
+        'Saut en parachute',
+        '',
+        'Surf',
+        '',
+        'Baptème de voltige',
+        '',
+        'Escalade sur glace',
+        '',
+        'Jet Pack',
+        ''
+    ),
+    (
+        'Dans son plus simple appareil',
+        'C:\Users\anael\Hackathon1\protojam-groupe-c\server\public\assets\images\liste-plages-naturistes-nudiste-region-france.jpg',
+        'Vous ne rêvez pas. Elle ne porte rien',
+        'Pour les plus courageux, nous proposons une retraite insolite à l’abris des regards. Ne vous embêtez pas avec les dimensions de votre valise pour l’avion, venez comme vous êtes.',
+        'Randonnue',
+        '',
+        'Olympoils',
+        '',
+        'Lutte',
+        '',
+        'Barbecul',
+        '',
+        'VolleyBall',
+        ''
+    );
+
 
 CREATE TABLE `quizz` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
