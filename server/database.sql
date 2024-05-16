@@ -1,4 +1,4 @@
--- Active: 1711385285915@@127.0.0.1@3306@hideaway
+-- Active: 1713452145964@@127.0.0.1@3306@hideaway
 -- phpMyAdmin SQL Dump
 -- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
@@ -88,3 +88,33 @@ AUTO_INCREMENT = 3;
 ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
 ;
+
+CREATE TABLE `retraite` (
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `titre` VARCHAR(100) NOT NULL,
+    `first_url` VARCHAR(255) NOT NULL,
+    `sous-titre` VARCHAR(100) NOT NULL,
+    `description` TEXT NULL,
+    `activity1` VARCHAR(250) NULL,
+    `acti1_url` VARCHAR(250) NULL,
+    `activity2` VARCHAR(250) NULL,
+    `acti1_ur2` VARCHAR(250) NULL,
+    `activity3` VARCHAR(250) NULL,
+    `acti1_ur3` VARCHAR(250) NULL,
+    `activity4` VARCHAR(250) NULL,
+    `acti1_ur4` VARCHAR(250) NULL,
+    `activity5` VARCHAR(250) NULL,
+    `acti1_ur5` VARCHAR(250) NULL
+)
+
+CREATE TABLE `quizz` (
+    `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `offer` BOOLEAN,
+    `nb_person` INT NOT NULL,
+    `age` VARCHAR(3),
+    `have_child` BOOLEAN,
+    `nb_child` INT NOT NULL,
+    `u_are` VARCHAR,
+    `u_like` VARCHAR,
+    FOREIGN KEY (id_user) REFERENCES 
+)
