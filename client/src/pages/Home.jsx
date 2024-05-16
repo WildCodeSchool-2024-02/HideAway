@@ -48,25 +48,70 @@ export default function Home() {
     }, 5000); // Change la durée ici (en millisecondes)
 
     return () => clearInterval(interval); // Nettoie le setInterval lors de la démontage du composant
-  }); // useEffect s'ex
+  }); // useEffect s'exécute une seule fois après le premier rendu
 
   return (
     <>
       <div className="background">
         <div className="homecontainer">
           <div className="accueiltitle">
-            <h1 className="page-title">NOM DU SITE</h1>
+            <h1 className="page-title">HIDEAWAY</h1>
             <div className="carousel">
               <img
                 src={slides[currentSlide].src}
                 alt={slides[currentSlide].alt}
                 className="imgparachute"
               />
+              <ul className="all-buttons">
+                <li>
+                  <Link
+                    className="buttons"
+                    to="/register"
+                    activeClassName="active"
+                  >
+                    {" "}
+                    💬 S'enregistrer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="buttons"
+                    to="/login"
+                    activeClassName="active"
+                  >
+                    {" "}
+                    ✅ Se connecter
+                  </Link>
+                </li>
+                <div className="buttons-quizz-all">
+                  <li className="button-quizz">
+                    <Link
+                      to="/quizz"
+                      className="text-quizz"
+                      activeClassName="active"
+                    >
+                      {" "}
+                      ⏩ Faire le quizz
+                    </Link>
+                  </li>
+
+                  <li className="button-all">
+                    <Link
+                      to="/activities"
+                      className="text-quizz"
+                      activeClassName="active"
+                    >
+                      {" "}
+                      ⭐ Voir toutes les activités{" "}
+                    </Link>
+                  </li>
+                </div>
+              </ul>
             </div>
             <div className="carousel-dots">
               {slides.map((_, index) => (
                 <button
-                  key={[index]}
+                  key={[]}
                   className={`dot ${index === currentSlide ? "active" : ""}`}
                   onClick={() => handleDotClick(index)}
                   onKeyDown={handleKeyDown}
@@ -77,43 +122,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <ul className="all-buttons">
-            <li>
-              <Link className="buttons" to="/register" activeClassName="active">
-                {" "}
-                💬 S'enregistrer
-              </Link>
-            </li>
-            <li>
-              <Link className="buttons" to="/login" activeClassName="active">
-                {" "}
-                ✅ Se connecter
-              </Link>
-            </li>
-            <div className="buttons-quizz-all">
-              <li className="button-quizz">
-                <Link
-                  to="/quizz"
-                  className="text-quizz"
-                  activeClassName="active"
-                >
-                  {" "}
-                  ⏩ Faire le quizz
-                </Link>
-              </li>
-
-              <li className="button-all">
-                <Link
-                  to="/activities"
-                  className="text-quizz"
-                  activeClassName="active"
-                >
-                  {" "}
-                  ⭐ Voir toutes les activités{" "}
-                </Link>
-              </li>
-            </div>
-          </ul>
         </div>
       </div>
       <Footer />

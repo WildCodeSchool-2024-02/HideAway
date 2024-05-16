@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import "./styles/activitycard.css";
 
@@ -13,11 +14,10 @@ function ActivityCard({ activity }) {
         />
       </div>
       <div className="card__body">
-        <span className="tag">{activity.label}</span>
-        <h4> {activity.title} !</h4>
+        <h4>{activity.title} !</h4>
         <p className="text">{activity.subtitle}</p>
         <div>
-          <h5> Exemples d'activités</h5>
+          <h5>Exemples d'activités</h5>
           <div className="card__flex__activity">
             <div className="card__carroussel__activity">
               <img
@@ -25,7 +25,7 @@ function ActivityCard({ activity }) {
                 alt={activity.title}
                 className="card__image__activity"
               />
-              <p> {activity.activity1} </p>
+              <p>{activity.activity1}</p>
             </div>
             <div className="card__carroussel__activity">
               <img
@@ -33,7 +33,7 @@ function ActivityCard({ activity }) {
                 alt={activity.title}
                 className="card__image__activity"
               />
-              <p> {activity.activity2} </p>
+              <p>{activity.activity2}</p>
             </div>
             <div className="card__carroussel__activity">
               <img
@@ -41,19 +41,22 @@ function ActivityCard({ activity }) {
                 alt={activity.title}
                 className="card__image__activity"
               />
-              <p> {activity.activity3} </p>
+              <p>{activity.activity3}</p>
             </div>
           </div>
         </div>
         <div className="button__section">
-          <button className="button__showmore" type="button">
-            Je veux en savoir plus
-          </button>
+          <Link to={`/activity/${activity.id}`}>
+            <button className="button__showmore" type="button">
+              Je veux en savoir plus
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
+
 ActivityCard.propTypes = {
   activity: PropTypes.shape({
     image: PropTypes.string.isRequired,
@@ -66,6 +69,7 @@ ActivityCard.propTypes = {
     activity2: PropTypes.string.isRequired,
     activity3image: PropTypes.string.isRequired,
     activity3: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -16,13 +16,8 @@ export default function Register() {
 
     try {
       const response = await axios.post(
-        "/register",
-        {
-          firstname,
-          lastname,
-          email,
-          password,
-        },
+        "https://4dc8ea1706a598.lhr.life/register",
+        { firstname, lastname, password, email },
         {
           headers: {
             "Content-Type": "application/json",
@@ -67,7 +62,7 @@ export default function Register() {
                         value={firstname}
                         onChange={(e) => setFirstname(e.target.value)}
                         placeholder="Prénom"
-                        required
+                        // required
                       />
                     </div>
 

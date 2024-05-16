@@ -30,6 +30,10 @@ h1 {
   padding: 1rem;
 }
 
+.activity-banière {
+  width: 80vw;
+}
+
 @media screen and (min-width: 762px) {
   .activitylist-section {
     width: 100vw;

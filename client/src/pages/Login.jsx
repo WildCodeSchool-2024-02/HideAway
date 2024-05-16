@@ -15,11 +15,8 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "/login",
-        {
-          email,
-          password,
-        },
+        "https://07c2bc2e82360c.lhr.life/login",
+        { email, password },
         {
           headers: {
             "Content-Type": "application/json",
@@ -79,7 +76,6 @@ export default function Login() {
                       required
                     />
                   </div>
-                  {/* <Link to="/"> */}
                   <button
                     data-mdb-button-init
                     data-mdb-ripple-init
@@ -88,7 +84,6 @@ export default function Login() {
                   >
                     Connexion
                   </button>
-                  {/* </Link> */}
                   <hr />
 
                   <p className="logintext">
