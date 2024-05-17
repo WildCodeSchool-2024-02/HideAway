@@ -124,18 +124,14 @@ export default function Register() {
         {showSuccessModal && (
           <div className="modal">
             <div className="modal-content">
-              <button
-                type="button"
-                className="close"
-                onClick={closeSuccessModal}
-              >
-                &times;
-              </button>
               <p>
                 Enregistrement réussis ! Vous allez être redirigé vers la page
                 d'accueil.
               </p>
             </div>
+            <button type="button" className="close" onClick={closeSuccessModal}>
+              &times;
+            </button>
           </div>
         )}
 

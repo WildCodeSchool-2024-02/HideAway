@@ -27,7 +27,7 @@
 
 .modal-content {
   display: flex;
-  justify-content: center;
+  flex-direction: row-reverse;
   text-align: center;
   background-color: var(--secondary-color);
   font-family: var(--primary-font);
@@ -40,8 +40,8 @@
 }
 
 .close {
+  display: flex;
   color: red;
-  float: right;
   font-size: 50px;
   font-weight: bold;
   background-color: var(--secondary-color);

@@ -35,7 +35,7 @@ export default function Login() {
     } catch (error) {
       setShowErrorModal("Échec de la connexion. Veuillez réessayer.");
     } finally {
-      setShowSuccessModal(true);
+      setShowSuccessModal(false);
     }
   };
 
