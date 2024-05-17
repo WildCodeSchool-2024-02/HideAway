@@ -1,0 +1,50 @@
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 1rem;
+}
+
+.activity-flexbox {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 15rem;
+  margin: 2rem 0;
+  height: 60vh;
+}
+
+.activity-right {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--secondary-font);
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+}
+
+.activity-activity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.activity-image {
+  width: 70vh;
+}
+
+.activity-image-bis {
+  height: 100px;
+}
+
+h5 {
+  font-size: 2rem;
+}

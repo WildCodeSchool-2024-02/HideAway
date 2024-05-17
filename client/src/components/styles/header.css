@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Figtree", sans-serif;
+  --primary-color: #000000;
+  --secondary-color: #d9d8d2;
+  --terciary-color: #ffffff;
+  --color-4: #595025;
+  --color-5: #d9971a;
+  --color-6: #01c794;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.header {
+  padding-top: 1rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  width: 50rem;
+  height: 80px;
+  color: white;
+  margin: 0 auto 0;
+  border-radius: 10px;
+  background-color: var(--color-6);
+  font-size: var(--secondary-font);
+}
+
+li a:hover {
+  color: rgb(77, 77, 77);
+}
+
+.nav-ul {
+  margin-left: 62px;
+}
+
+li {
+  list-style: none;
+  font-size: 1.27rem;
+  display: inline;
+  margin: 16px;
+}
+
+a {
+  line-height: 52px;
+  border-radius: 10px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: large;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  width: 130px;
+}
+
+@media screen and (max-width: 762px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-bar {
+    width: 25rem;
+  }
+
+  .nav-ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}
