@@ -6,8 +6,6 @@ use App\Model\UserManager;
 use App\Controller\AbstractAPIController;
 
 
-
-
 class UserAPIController extends AbstractAPIController
 {
     public function register()

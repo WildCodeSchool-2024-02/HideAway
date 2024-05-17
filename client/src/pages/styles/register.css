@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+.background {
+  background-image: url("../../../src/assets/images/fondlogin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.bienvenuetexte {
+  font-weight: bolder;
+  font-size: 3rem;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.cardlogin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem;
+  gap: 30px;
+  background-color: white;
+  background-position: center;
+  width: 7vh;
+  height: 7vh;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imgwelcome {
+  width: 38rem;
+  height: 34rem;
+}
+
+hr {
+  color: gray;
+  width: 27rem;
+}
+
+.logintext,
+label {
+  color: black;
+  font-weight: bold;
+}
+
+.cardcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connexionbutton {
+  width: 20rem;
+  height: 2rem;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #d9971a;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.connexionbutton:hover {
+  transform: scale(1.02);
+  background-color: #b87a16;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+
+.connexiontext {
+  color: #01c794;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #01c794;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.8s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+[data-mdb-input-init] {
+  position: relative;
+}
+
+[data-mdb-input-init]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 19rem;
+  height: 2px;
+  background-color: blue;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input {
+  width: 18rem;
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-group input:focus + .blue-line {
+  background-color: #01c794;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  transform: translate(-50%, -120%);
+  font-size: 12px;
+  color: #01c794;
+}
