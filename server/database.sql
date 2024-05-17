@@ -76,7 +76,7 @@ CREATE TABLE `retraite` (
     `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `titre` VARCHAR(100) NOT NULL,
     `first_url` VARCHAR(255) NOT NULL,
-    `sous-titre` VARCHAR(100) NOT NULL,
+    `sous_titre` VARCHAR(100) NOT NULL,
     `description` TEXT NULL,
     `activity1` VARCHAR(250) NULL,
     `acti1_url` VARCHAR(250) NULL,

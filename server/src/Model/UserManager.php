@@ -11,13 +11,6 @@ class UserManager extends AbstractManager
 
     public function insert(array $userdata)
     {
-        $client = HttpClient::create();
-        $response = $client->request(
-            'POST',
-            'https://api.github.com/repos/symfony/symfony-docs'
-        );
-        $content = $response->toArray();
-
         $statement = $this->pdo->prepare("INSERT INTO " . static::TABLE .
             " (`email`, `password`, `firstname`, `lastname`)
             VALUES (:email, :password, :firstname, :lastname)");
@@ -28,5 +21,13 @@ class UserManager extends AbstractManager
         $statement->execute();
 
         return (int)$this->pdo->lastInsertId();
+    }
+    public function selectOneByEmail(string $email)
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM " . self::TABLE . " WHERE email = :email ");
+        $statement->bindValue('email', $email, \PDO::PARAM_STR);
+        $statement->execute();
+
+        return $statement->fetch();
     }
 }
