@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.footer-link {
+  display: inline-block;
+}
+
+.github-logo {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.github-logo:hover {
+  transform: scale(3);
+}
+
+.made {
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.projettext {
+  font-size: 10px;
+  font-weight: bold;
+}
