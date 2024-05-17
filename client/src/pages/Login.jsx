@@ -5,10 +5,13 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./styles/login.css";
+import "./styles/modal.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,14 +28,19 @@ export default function Login() {
       );
 
       if (response.status === 200) {
-        console.info("Login successful:", response.data);
+        setShowSuccessModal("Connexion réussie !");
       } else {
-        console.error("Login failed");
+        setShowErrorModal("Échec de la connexion.");
       }
     } catch (error) {
-      console.error("Login failed", error);
+      setShowErrorModal("Échec de la connexion. Veuillez réessayer.");
+    } finally {
+      setShowSuccessModal(true);
     }
   };
+
+  const closeSuccessModal = () => setShowSuccessModal(false);
+  const closeErrorModal = () => setShowErrorModal(false);
 
   return (
     <>
@@ -99,6 +107,27 @@ export default function Login() {
         </div>
       </div>
       <Footer />
+      {showSuccessModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <button type="button" className="close" onClick={closeSuccessModal}>
+              &times;
+            </button>
+            <p>Vous êtes connecté !</p>
+          </div>
+        </div>
+      )}
+
+      {showErrorModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <button type="button" className="close" onClick={closeErrorModal}>
+              &times;
+            </button>
+            <p>Échec de connexion ! Essayez à nouveau.</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

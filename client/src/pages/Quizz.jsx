@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./styles/quizz.css";
@@ -36,8 +35,15 @@ export default function Quizz() {
 
     try {
       const response = await axios.post(
-        "https://httpbin.org/post",
-        selectedAnswers,
+        "https://07c2bc2e82360c.lhr.life/login",
+        {
+          offer: selectedAnswers.forWho,
+          nb_person: selectedAnswers.personnes,
+          age: selectedAnswers.age,
+          have_child: selectedAnswers.enfants,
+          u_are: selectedAnswers.preference,
+          u_like: selectedAnswers.personality,
+        },
         {
           headers: {
             "Content-Type": "application/json",
@@ -46,185 +52,75 @@ export default function Quizz() {
       );
 
       if (response.status === 200) {
-        console.info("Quizz submission successful:", response.data);
+        console.info("Login successful:", response.data);
       } else {
-        console.error("Quizz submission failed");
+        console.error("Login failed");
       }
     } catch (error) {
-      console.error("Quizz submission failed", error);
+      console.error("Login failed", error);
     }
   };
 
   const sections = [
-    <section className="quizz-question-response" key="forWho">
-      <h2 className="quizz-question">
-        A qui cette expérience est-elle destinée?
-      </h2>
-      <label className="quizz-label">
-        Pour offrir, eh oui je suis généreux !
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.forWho === "offrir"}
-          onChange={() => handleCheckboxChange("forWho", "offrir")}
-        />
-      </label>
-      <label className="quizz-label">
-        Pour moi, faut bien se faire plaisir !
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.forWho === "pour-moi"}
-          onChange={() => handleCheckboxChange("forWho", "pour-moi")}
-        />
-      </label>
-    </section>,
-
-    <section className="quizz-question-response" key="personnes">
-      <h2 className="quizz-question">Pour combien de personnes?</h2>
-      <label className="quizz-label">
-        Entrez le nombre de personnes:
-        <input
-          type="number"
-          className="case-number"
-          value={selectedAnswers.personnes}
-          onChange={(e) => handleInputChange("personnes", e.target.value)}
-        />
-      </label>
-    </section>,
-
-    <section className="quizz-question-response" key="âge">
-      <h2 className="quizz-question">Quel âge avez-vous?</h2>
-      <label className="quizz-label">
-        18-30ans
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.age === "18-30"}
-          onChange={() => handleCheckboxChange("age", "18-30")}
-        />
-      </label>
-      <label className="quizz-label">
-        30-50ans
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.age === "30-50"}
-          onChange={() => handleCheckboxChange("age", "30-50")}
-        />
-      </label>
-      <label className="quizz-label">
-        50-99ans
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.age === "50-99"}
-          onChange={() => handleCheckboxChange("age", "50-99")}
-        />
-      </label>
-    </section>,
-
-    <section className="quizz-question-response" key="enfant">
-      <h2 className="quizz-question">Avez-vous des enfants?</h2>
-      <label className="quizz-label">
-        Oui (malheureusement)
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.enfants === "oui"}
-          onChange={() => handleCheckboxChange("enfants", "oui")}
-        />
-      </label>
-      <label className="quizz-label">
-        Non, surtout pas !
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.enfants === "non"}
-          onChange={() => handleCheckboxChange("enfants", "non")}
-        />
-      </label>
-    </section>,
-
-    <section className="quizz-question-response" key="preferez">
-      <h2 className="quizz-question">Vous préférez:</h2>
-      <label className="quizz-label">
-        La plage
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.preference === "plage"}
-          onChange={() => handleCheckboxChange("preference", "plage")}
-        />
-      </label>
-      <label className="quizz-label">
-        La montagne
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.preference === "montagne"}
-          onChange={() => handleCheckboxChange("preference", "montagne")}
-        />
-      </label>
-      <label className="quizz-label">
-        La campagne
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.preference === "prairie"}
-          onChange={() => handleCheckboxChange("preference", "prairie")}
-        />
-      </label>
-      <label className="quizz-label">
-        La ville
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.preference === "ville"}
-          onChange={() => handleCheckboxChange("preference", "ville")}
-        />
-      </label>
-    </section>,
-
-    <section className="quizz-question-response" key="choice">
-      <h2 className="quizz-question">Vous êtes plutôt:</h2>
-      <label className="quizz-label">
-        Casse-cou, le goût du risque c'est tout moi
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.personality === "casse-cou"}
-          onChange={() => handleCheckboxChange("personality", "casse-cou")}
-        />
-      </label>
-      <label className="quizz-label">
-        Fêtard, dansez jusqu'au bout de la nuit
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.personality === "fetard"}
-          onChange={() => handleCheckboxChange("personality", "fetard")}
-        />
-      </label>
-      <label className="quizz-label">
-        Manuel, j'aime construire des choses moi-même
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.personality === "manuel"}
-          onChange={() => handleCheckboxChange("personality", "manuel")}
-        />
-      </label>
-      <label className="quizz-label">
-        Évasion, je veux partir dans un endroit insolite
-        <input
-          type="checkbox"
-          className="case"
-          checked={selectedAnswers.personality === "evasion"}
-          onChange={() => handleCheckboxChange("personality", "evasion")}
-        />
-      </label>
-    </section>,
+    {
+      key: "forWho",
+      question: "A qui cette expérience est-elle destinée?",
+      options: [
+        { label: "Pour offrir, eh oui je suis généreux !", value: "offrir" },
+        { label: "Pour moi, faut bien se faire plaisir !", value: "pour-moi" },
+      ],
+    },
+    {
+      key: "personnes",
+      question: "Pour combien de personnes?",
+      input: true,
+    },
+    {
+      key: "age",
+      question: "Quel âge avez-vous?",
+      options: [
+        { label: "18-30ans", value: "18-30" },
+        { label: "30-50ans", value: "30-50" },
+        { label: "50-99ans", value: "50-99" },
+      ],
+    },
+    {
+      key: "enfants",
+      question: "Avez-vous des enfants?",
+      options: [
+        { label: "Oui (malheureusement)", value: "oui" },
+        { label: "Non, surtout pas !", value: "non" },
+      ],
+    },
+    {
+      key: "preference",
+      question: "Vous préférez:",
+      options: [
+        { label: "La plage", value: "plage" },
+        { label: "La montagne", value: "montagne" },
+        { label: "La campagne", value: "prairie" },
+        { label: "La ville", value: "ville" },
+      ],
+    },
+    {
+      key: "personality",
+      question: "Vous êtes plutôt:",
+      options: [
+        {
+          label: "Casse-cou, le goût du risque c'est tout moi",
+          value: "casse-cou",
+        },
+        { label: "Fêtard, dansez jusqu'au bout de la nuit", value: "fetard" },
+        {
+          label: "Manuel, j'aime construire des choses moi-même",
+          value: "manuel",
+        },
+        {
+          label: "Évasion, je veux partir dans un endroit insolite",
+          value: "evasion",
+        },
+      ],
+    },
   ];
 
   return (
@@ -235,12 +131,49 @@ export default function Quizz() {
           <h1 className="main-title">Quizz</h1>
           <p className="quizz-description">
             Vous allez effectuer un test qui va déterminer quelle serait votre
-            activité idéale en fonction de vos réponses.{" "}
+            activité idéale en fonction de vos réponses.
           </p>
-          <form onSubmit={handleSubmit} className="form">
-            {sections[currentSection]}
+          <form method="post" onSubmit={handleSubmit}>
+            {sections.map((section, index) =>
+              currentSection === index ? (
+                <section className="quizz-question-response" key={section.key}>
+                  <h2 className="quizz-question">{section.question}</h2>
+                  {section.input ? (
+                    <label className="quizz-label">
+                      Entrez le nombre de personnes:
+                      <input
+                        type="number"
+                        name="nb_person"
+                        className="case-number"
+                        value={selectedAnswers.personnes}
+                        onChange={(e) =>
+                          handleInputChange("personnes", e.target.value)
+                        }
+                      />
+                    </label>
+                  ) : (
+                    section.options.map((option) => (
+                      <label className="quizz-label" key={option.value}>
+                        {option.label}
+                        <input
+                          type="checkbox"
+                          className="case"
+                          name={section.key}
+                          checked={
+                            selectedAnswers[section.key] === option.value
+                          }
+                          onChange={() =>
+                            handleCheckboxChange(section.key, option.value)
+                          }
+                        />
+                      </label>
+                    ))
+                  )}
+                </section>
+              ) : null
+            )}
             <div className="quizz-navigation">
-              {currentSection > 5 && (
+              {currentSection > 0 && (
                 <button
                   type="button"
                   onClick={() => setCurrentSection(currentSection - 1)}
