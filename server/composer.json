@@ -10,8 +10,7 @@
     "minimum-stability": "stable",
     "require": {
         "twig/twig": "^3.5.1",
-        "ext-pdo": "*",
-        "symfony/http-client": "^7.0"
+        "ext-pdo": "*"
     },
     "require-dev": {
         "filp/whoops": "^2.15",
@@ -30,27 +29,4 @@
             "phpro/grumphp": true
         }
     }
-  ],
-  "minimum-stability": "stable",
-  "require": {
-    "twig/twig": "^3.5.1",
-    "ext-pdo": "*"
-  },
-  "require-dev": {
-    "filp/whoops": "^2.15",
-    "phpmd/phpmd": "^2.13",
-    "phpro/grumphp": "^1.9",
-    "phpstan/phpstan": "^1.10.7",
-    "squizlabs/php_codesniffer": "^3.7.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/"
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "phpro/grumphp": true
-    }
-  }
 }
