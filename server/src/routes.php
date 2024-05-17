@@ -16,4 +16,5 @@ return [
     'register' => ['UserAPIController', 'register'],
     'retraite' => ['RetraiteController', 'list'],
     'login' => ['UserAPIController', 'login'],
+    'result' => ['QuizzController', 'resultQuizz']
 ];

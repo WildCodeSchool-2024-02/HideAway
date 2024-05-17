@@ -59,7 +59,8 @@ class UserAPIController extends AbstractAPIController
             $userManager = new UserManager();
             $user = $userManager->selectOneByEmail($userdata['email']);
             if (!empty($user) && password_verify($userdata['password'], $user['password'])) {
-                return json_encode(['login' => 1]);
+
+                return json_encode(['user' => $user]);
             } else {
                 $errors[] = 'L\'adresse email ou le mot de passe n\'est pas valide';
             }
