@@ -1,45 +1,26 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./styles/login.css";
+import "./styles/modal.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await axios.post(
-        "https://07c2bc2e82360c.lhr.life/login",
-        { email, password },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        console.info("Login successful:", response.data);
-      } else {
-        console.error("Login failed");
-      }
-    } catch (error) {
-      console.error("Login failed", error);
-    }
-  };
+  const closeSuccessModal = () => setShowSuccessModal(false);
+  const closeErrorModal = () => setShowErrorModal(false);
 
   return (
     <>
       <div>
         <div className="background">
           <Header />
-          <form method="post" onSubmit={handleSubmit}>
+          <form method="post">
             <section>
               <div className="cardcenter">
                 <img
@@ -85,7 +66,6 @@ export default function Login() {
                     Connexion
                   </button>
                   <hr />
-
                   <p className="logintext">
                     Vous n'avez pas encore de compte ?
                     <Link to="/register">
@@ -99,6 +79,27 @@ export default function Login() {
         </div>
       </div>
       <Footer />
+      {showSuccessModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <button type="button" className="close" onClick={closeSuccessModal}>
+              &times;
+            </button>
+            <p>Bienvenue Fanny, tu vas être redirigé vers la page d'accueil.</p>
+          </div>
+        </div>
+      )}
+
+      {showErrorModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <button type="button" className="close" onClick={closeErrorModal}>
+              &times;
+            </button>
+            <p>Échec de connexion ! Essayez à nouveau.</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

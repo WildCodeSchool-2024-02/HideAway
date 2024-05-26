@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
 
 :root {
   --primary-font: "Bebas Neue", sans-serif;
@@ -12,17 +13,20 @@
   --color-6: #01c794;
 }
 
+button {
+  font-family: "Poetsen One", sans-serif;
+}
+
 .backgroundquizz {
   background-image: url("../../../src/assets/images/fondlogin.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 126.5vh;
+  height: auto;
 }
 
 .main-title {
   margin-bottom: 1rem;
-  margin-top: 5rem;
   font-size: 7rem;
   font-family: var(--primary-font);
   color: var(--color-5);
@@ -59,12 +63,12 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 0.5rem;
-  margin-bottom: 5rem;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 50rem;
-  height: 38rem;
+  height: 40rem;
+  margin-bottom: 2rem;
 }
 
 /** Les cases **/
@@ -95,7 +99,7 @@
 }
 
 .submit-quizz {
-  background-color: var(--color-5);
+  background-color: green;
   color: white;
   font-weight: bold;
   font-size: 2rem;
@@ -104,8 +108,13 @@
   border-radius: 40px;
   cursor: pointer;
   position: absolute;
-  top: 1.5rem;
-  left: -110px;
+  margin: 0 0 350px 450px;
+  text-align: center;
+}
+
+.submit-quizz:hover {
+  transform: scale(1.03);
+  background-color: rgb(3, 75, 3);
 }
 
 .nav-button {
@@ -123,7 +132,7 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 20px;
-  margin: 0;
+  margin: 0 0 8rem 0;
   outline: none;
   overflow: visible;
   padding: 13px 16px;
@@ -137,6 +146,7 @@
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .nav-button:after {
@@ -225,8 +235,10 @@
   display: flex;
   justify-content: space-around;
   gap: 20rem;
-  z-index: 1;
-  position: absolute;
-  margin: 3rem 5rem 5rem 21.8rem;
-  top: 63.5rem;
+  width: 50rem;
+  align-items: center;
+}
+
+.footer2 {
+  margin-top: 10rem;
 }

@@ -17,7 +17,7 @@ function ActivityCard({ activity }) {
         <h4> {activity.titre} !</h4>
         <p className="text">{activity.sous_titre}</p>
         <div>
-          <h5> Exemples d'activités</h5>
+          <h5 className="h5"> Exemples d'activités</h5>
           <div className="card__flex__activity">
             <div className="card__carroussel__activity">
               <img

@@ -30,7 +30,7 @@ function ActivityList() {
       <h1>Découvrez toutes nos activités</h1>
       <img
         className="activity-banière"
-        src="../../src/assets/images/plage.png"
+        src="/src/assets/images/plage.png"
         alt="bannière"
       />
       <div className="activitylist-container">

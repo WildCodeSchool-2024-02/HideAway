@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
 
 :root {
   --primary-font: "Bebas Neue", sans-serif;
@@ -10,14 +11,6 @@
   --color-4: #595025;
   --color-5: #d9971a;
   --color-6: #01c794;
-}
-
-.background {
-  background-image: url("../../../src/assets/images/fondlogin.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .page-title {
@@ -32,10 +25,11 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-  font-family: "Shadows Into Light", cursive;
+  font-family: var(--primary-font);
   background-color: rgba(128, 128, 128, 0.5);
-  width: 80rem;
-  height: 50rem;
+  width: 100%;
+  height: 100%;
+  font-family: "Shadows Into Light", cursive;
   border-radius: 15px;
 }
 
@@ -43,6 +37,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .button-quizz {
@@ -63,7 +58,7 @@
 
 .imgparachute {
   width: 80rem;
-  height: 50rem;
+  height: 100vh;
   border-radius: 15px;
 }
 
@@ -74,17 +69,19 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  padding-top: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .text-quizz {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--primary-font);
+  font-family: "Poetsen One", sans-serif;
 }
 .accueiltitle {
   display: flex;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .carousel-container {
@@ -122,6 +119,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .all-buttons {
@@ -152,9 +155,11 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .buttons:hover,
 .text-quizz:hover {
   background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.8);
 }
