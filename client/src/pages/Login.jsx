@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -13,32 +12,6 @@ export default function Login() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await axios.post(
-        "https://07c2bc2e82360c.lhr.life/login",
-        { email, password },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        setShowSuccessModal("Connexion réussie !");
-      } else {
-        setShowErrorModal("Échec de la connexion.");
-      }
-    } catch (error) {
-      setShowErrorModal("Échec de la connexion. Veuillez réessayer.");
-    } finally {
-      setShowSuccessModal(false);
-    }
-  };
-
   const closeSuccessModal = () => setShowSuccessModal(false);
   const closeErrorModal = () => setShowErrorModal(false);
 
@@ -47,7 +20,7 @@ export default function Login() {
       <div>
         <div className="background">
           <Header />
-          <form method="post" onSubmit={handleSubmit}>
+          <form method="post">
             <section>
               <div className="cardcenter">
                 <img
@@ -93,7 +66,6 @@ export default function Login() {
                     Connexion
                   </button>
                   <hr />
-
                   <p className="logintext">
                     Vous n'avez pas encore de compte ?
                     <Link to="/register">
@@ -113,7 +85,7 @@ export default function Login() {
             <button type="button" className="close" onClick={closeSuccessModal}>
               &times;
             </button>
-            <p>Vous êtes connecté !</p>
+            <p>Bienvenue Fanny, tu vas être redirigé vers la page d'accueil.</p>
           </div>
         </div>
       )}

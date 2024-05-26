@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -14,12 +14,26 @@ export default function Register() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
 
+  const BASE_URL = "https://08f22acd381de7.lhr.life";
+
+  useEffect(() => {
+    if (showSuccessModal) {
+      const timer = setTimeout(() => {
+        setShowSuccessModal(false);
+        window.location.href = "/";
+      }, 6000);
+
+      return () => clearTimeout(timer);
+    }
+    return undefined;
+  }, [showSuccessModal]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const response = await axios.post(
-        "https://2dd856a23cacbe.lhr.life/register",
+        `${BASE_URL}/register`,
         { firstname, lastname, password, email },
         {
           headers: {
@@ -29,6 +43,7 @@ export default function Register() {
       );
 
       if (response.status === 200) {
+        console.info(response);
         setShowSuccessModal(true);
       } else {
         setShowErrorModal(true);
@@ -119,14 +134,12 @@ export default function Register() {
             </div>
           </section>
         </form>
-        <Footer />
 
         {showSuccessModal && (
           <div className="modal">
             <div className="modal-content">
               <p>
-                Enregistrement réussis ! Vous allez être redirigé vers la page
-                d'accueil.
+                Bienvenue Fanny ! Tu vas être redirigée vers la page d'accueil.
               </p>
             </div>
             <button type="button" className="close" onClick={closeSuccessModal}>
@@ -141,11 +154,12 @@ export default function Register() {
               <button type="button" className="close" onClick={closeErrorModal}>
                 &times;
               </button>
-              <p>Inscription échoué! Essayez à nouveau.</p>
+              <p>Inscription échouée ! Essayez à nouveau.</p>
             </div>
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

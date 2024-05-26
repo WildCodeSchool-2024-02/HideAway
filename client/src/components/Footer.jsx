@@ -14,7 +14,7 @@ function Footer() {
         className="footer-link"
       >
         <img
-          src="../../src/assets/images/githublogoo.png"
+          src="/src/assets/images/githublogoo.png"
           alt="GitHub Logo"
           className="github-logo"
         />

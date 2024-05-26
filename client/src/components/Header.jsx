@@ -7,11 +7,7 @@ function Header() {
     <div className="header">
       <nav className="nav-bar">
         <Link to="/">
-          <img
-            src="../../src/assets/images/logo.png"
-            alt="logo"
-            className="logo"
-          />
+          <img src="/src/assets/images/logo.png" alt="logo" className="logo" />
         </Link>
         <ul className="nav-ul">
           <li className="nav-point">

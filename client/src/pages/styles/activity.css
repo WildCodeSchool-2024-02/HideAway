@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
 :root {
   --primary-font: "Bebas Neue", sans-serif;
   --secondary-font: "Figtree", sans-serif;
@@ -13,6 +14,7 @@ h1 {
   text-align: center;
   font-size: 3rem;
   padding-top: 1rem;
+  font-family: "Freeman", sans-serif;
 }
 
 .activity-flexbox {
@@ -29,6 +31,8 @@ h1 {
   font-family: var(--secondary-font);
   box-sizing: border-box;
   padding: 1rem 2rem;
+  gap: 25px;
+  font-family: "Freeman", sans-serif;
 }
 
 .activity-activity {
@@ -39,12 +43,24 @@ h1 {
 
 .activity-image {
   width: 70vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
 .activity-image-bis {
   height: 100px;
+  width: 12rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 h5 {
   font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 50px;
 }
