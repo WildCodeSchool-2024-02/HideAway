@@ -4,6 +4,8 @@ import ActivityCard from "./ActivityCard";
 
 import "./styles/activitylist.css";
 
+import plage from "../assets/images/plage.png";
+
 function ActivityList() {
   const [activities, setActivities] = useState([]);
 
@@ -30,7 +32,7 @@ function ActivityList() {
       <h1>Découvrez toutes nos activités</h1>
       <img
         className="activity-banière"
-        src="/src/assets/images/plage.png"
+        src={plage}
         alt="bannière"
       />
       <div className="activitylist-container">

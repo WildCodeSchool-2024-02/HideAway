@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 
 import "./styles/header.css";
 
+import logo from "../assets/images/logo.png";
+
 function Header() {
   return (
     <div className="header">
       <nav className="nav-bar">
         <Link to="/">
-          <img src="/src/assets/images/logo.png" alt="logo" className="logo" />
+          <img src={logo} alt="logo" className="logo" />
         </Link>
         <ul className="nav-ul">
           <li className="nav-point">
