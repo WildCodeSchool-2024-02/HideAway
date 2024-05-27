@@ -3,6 +3,8 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
+import welcome from "../assets/images/welcome.jpeg";
+
 import "./styles/register.css";
 import "./styles/modal.css";
 
@@ -65,7 +67,7 @@ export default function Register() {
             <div>
               <div className="cardcenter">
                 <img
-                  src="../../../src/assets/images/welcome.jpeg"
+                  src={welcome}
                   className="imgwelcome"
                   alt="welcome"
                 />

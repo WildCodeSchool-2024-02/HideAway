@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
+import welcome from "../assets/images/welcome.jpeg"
+
 import "./styles/login.css";
 import "./styles/modal.css";
 
@@ -24,7 +27,7 @@ export default function Login() {
             <section>
               <div className="cardcenter">
                 <img
-                  src="../../../src/assets/images/welcome.jpeg"
+                  src={welcome}
                   className="imgwelcome"
                   alt="welcome"
                 />

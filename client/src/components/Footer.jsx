@@ -1,5 +1,7 @@
 import "./styles/footer.css";
 
+import github from "../assets/images/githublogoo.png"
+
 function Footer() {
   return (
     <div className="footer">
@@ -14,7 +16,7 @@ function Footer() {
         className="footer-link"
       >
         <img
-          src="/src/assets/images/githublogoo.png"
+          src={github}
           alt="GitHub Logo"
           className="github-logo"
         />
